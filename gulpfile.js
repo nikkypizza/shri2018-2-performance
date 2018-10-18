@@ -36,11 +36,11 @@ gulp.task('jpgmin', () =>
 
 // Minify SVG
 gulp.task(`svgo`, function() {
-  gulp.src(`assets-source/**/*.svg`)
+  gulp.src(`assets-source/svg/*.svg`)
     .pipe(imagemin([
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest(`assets`));
+    .pipe(gulp.dest(`assets/svg`));
 });
 
 // Genetare SVG sprite from icons starting with `icon-`
