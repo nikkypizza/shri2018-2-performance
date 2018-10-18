@@ -1,0 +1,36 @@
+{
+  "name": "shri_t2-2",
+  "version": "1.0.0",
+  "description": "В этом репозитории находятся материалы тестового задания по вёрстке для [14-й Школы разработки интерфейсов](https://academy.yandex.ru/events/frontend/shri_msk-2018-2) (осень 2018, Москва, Санкт-Петербург, Симферополь).",
+  "main": "index.html",
+  "scripts": {
+    "stylelint": "stylelint 'sass/**/*.scss' --syntax scss --fix",
+    "eslint": "eslint \"./js/*.js\" \"./js/modules/**/*.js\" --fix"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.1.1",
+    "browser-sync": "2.24.x",
+    "del": "^3.0.0",
+    "eslint": "4.19.1",
+    "eslint-config-htmlacademy": "0.5.x",
+    "gulp": "3.9.x",
+    "gulp-bower-normalize": "^1.1.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "1.4.0",
+    "gulp-svgstore": "6.1.1",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-webp": "^2.3.0",
+    "imagemin-guetzli": "^1.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "run-sequence": "2.2.1",
+    "stylelint": "^9.5.0",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "author": "nikkypizza",
+  "license": "ISC"
+}

@@ -15,8 +15,10 @@
     <div class="page__wrapper-content">
       <header class="header">
         <div class="logo header__logo">
-          <a href="yandex.ru" class="link logo__ya"></a>
-          <a href="#" class="link logo__ya-sub"></a>
+          <picture>
+            <source type="image/webp" srcset="assets/webp/logo.webp">
+            <img src="assets/logo.png" alt="Яндекс.Дом">
+          </picture>
         </div>
         <nav class="menu">
           <ul class="menu__list">
@@ -83,10 +85,13 @@
                   </div>
                 </div>
                 <div class="panel main__panel panel_device panel_out_bot">
-                  <img src="assets/banner.jpg" alt="Фотография Я.Колонки">
-                </div>
+                  <picture>
+                    <source type="image/webp" srcset="assets/webp/banner.webp">
+                    <img src="assets/banner.jpg" alt="Фотография колонки Xiaomi">
+                  </picture>
                 </div>
               </div>
+            </div>
           </section>
         </div>
         <div class="content__item content__item_half content__item_scenarios">
@@ -370,6 +375,7 @@
       </div>
     </div>
   </div>
+  <script src="modernizr-webp-custom.js"></script>
   <script src="scripts.js"></script>
 </body>
 
