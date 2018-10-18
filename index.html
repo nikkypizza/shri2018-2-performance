@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Smarthome</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body class="page">
@@ -43,6 +44,7 @@
         <div class="content__item content__item_half content__item_main">
           <div class="content__item-header">Главное</div>
           <section class="main">
+            <h2 class="display-none">Главное</h2>
             <div class="main__info">
               <div class="main__greeting">Привет, Геннадий!</div>
               <div class="main__status">Двери и окна закрыты, сигнализация включена.</div>
@@ -104,6 +106,7 @@
             </div>
           </div>
           <section class="scenarios">
+            <h2 class="display-none">Избранные сценарии</h2>
             <div class="scenarios__page">
               <div class="panel scenarios__panel">
                 <div class="panel__icon panel__icon_light_on"></div>
@@ -216,6 +219,7 @@
             </div>
           </div>
           <section class="devices">
+            <h2 class="display-none">Избранные устройства</h2>
             <div class="panel panel_device devices__panel panel_room panel_floor">
               <div class="panel__icon panel__icon_light_on"></div>
               <div class="panel__text">
@@ -296,7 +300,7 @@
           <div class="filter__item-label modal__filter-item_temp" id="hot">Жарко</div>
         </div>
         <div class="adjust-bar__container adjust-bar__container_theme_temp modal__adjust">
-          <input class="adjust-bar adjust-bar_theme_temp" type="range" name="lightRange" id="lightRange" value="23" min="-10" max="30" orient="vertical">
+          <input class="adjust-bar adjust-bar_theme_temp" type="range" name="lightRange" id="lightRange" value="23" min="-10" max="30">
         </div>
       </div>
       <div class="modal__controls">
@@ -318,7 +322,7 @@
           <div class="filter__item-label modal__filter-item" id="dawn">Рассвет</div>
         </div>
         <div class="adjust-bar__container adjust-bar__container_theme_light modal__adjust">
-          <input class="adjust-bar adjust-bar_theme_light" type="range" name="tempRange" id="lightRange" value="25" min="0" max="50" orient="vertical">
+          <input class="adjust-bar adjust-bar_theme_light" type="range" name="tempRange" id="lightRange" value="25" min="0" max="50">
         </div>
       </div>
       <div class="modal__controls">
@@ -326,7 +330,6 @@
         <div class="button button_size_l modal__button modal_close">Закрыть</div>
       </div>
     </div>
-  </div>
   </div>
   <div class="modal modal_knob">
     <div class="modal__content">
@@ -348,7 +351,7 @@
                 </feMerge>
               </filter>
               <g class="knob-container">
-                <circle class="knob_center" cx="0" cy="0" />
+                <circle class="knob_center" r="0" cx="0" cy="0" />
                 <circle class="knob__indicator-bg" r="110" cx="0" cy="0" />
                 <circle class="knob__indicator" r="100" cx="0" cy="0" />
                 <circle class="knob__indicator-mask" r="100" cx="0" cy="0" />
