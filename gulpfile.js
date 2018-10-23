@@ -93,7 +93,7 @@ gulp.task(`copy`, function() {
 });
 
 gulp.task(`cssmin`, function() {
-  gulp.src(`css/styles.css`)
+  gulp.src(`css/style.css`)
     .pipe(cssmin())
     .pipe(rename(`style.min.css`))
     .pipe(gulp.dest(`public/css`));

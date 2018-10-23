@@ -1,9 +1,9 @@
-"use strict";
-(function() {
+
+(function () {
   const output = document.querySelector(`.modal__value`);
   const rangeSLider = document.querySelector(`.adjust-bar_theme_temp`);
 
-  rangeSLider.oninput = function() {
+  rangeSLider.oninput = function () {
     output.innerHTML = this.value > 0 ? `+` + this.value : this.value;
   };
 
@@ -19,7 +19,7 @@
 
   pagiantorDevs.classList.toggle(`paginator_hide`, panelCountDevs < 7);
 
-  arrowRightDevs.addEventListener(`mouseup`, function() {
+  arrowRightDevs.addEventListener(`mouseup`, function () {
     currentPageDevs += 1;
     arrowLeftDevs.classList.toggle(`paginator__arrow_disabled`, currentPageDevs === 1);
     devices.scroll({
@@ -29,7 +29,7 @@
     });
   });
 
-  arrowLeftDevs.addEventListener(`mouseup`, function() {
+  arrowLeftDevs.addEventListener(`mouseup`, function () {
     if (currentPageDevs > 1) {
       currentPageDevs -= 1;
       arrowLeftDevs.classList.toggle(`paginator__arrow_disabled`, currentPageDevs === 1);
@@ -168,7 +168,7 @@
   setRotate(0);
 
   document.querySelectorAll(`.modal_close`).forEach((b) => {
-    b.onclick = function() {
+    b.onclick = function () {
       document.querySelectorAll(`.modal`).forEach((m) => {
         m.classList.toggle(`modal_open`, false);
         document.body.style.overflow = `auto`;
@@ -187,31 +187,31 @@
   const adjustBarTempNode = document.querySelector(`.adjust-bar_theme_temp`);
 
   document.querySelectorAll(`.modal__filter-item_temp`).forEach((l) => {
-    l.onclick = function() {
+    l.onclick = function () {
       adjustBarTempNode.value = TEMPS[this.id];
       modalTempValueNode.innerHTML = TEMPS[this.id] > 0 ? `+` + TEMPS[this.id] : TEMPS[this.id];
     };
   });
 
-  const showModal = function(selector) {
+  const showModal = function (selector) {
     document.querySelector(selector).classList.toggle(`modal_open`, true);
     document.body.style.overflow = `hidden`;
   };
 
   document.querySelectorAll(`.panel_temp`).forEach((p) => {
-    p.onclick = function() {
+    p.onclick = function () {
       showModal(`.modal_temp`);
     };
   });
 
   document.querySelectorAll(`.panel_lamp`).forEach((p) => {
-    p.onclick = function() {
+    p.onclick = function () {
       showModal(`.modal_light`);
     };
   });
 
   document.querySelectorAll(`.panel_floor`).forEach((p) => {
-    p.onclick = function() {
+    p.onclick = function () {
       showModal(`.modal_knob`);
     };
   });
@@ -230,7 +230,7 @@
 
   pagiantorScens.classList.toggle(`paginator_hide`, panelCountScens <= 9);
 
-  arrowRightScens.addEventListener(`mouseup`, function() {
+  arrowRightScens.addEventListener(`mouseup`, function () {
     if (currentPage < pageCountScens) {
       currentPage += 1;
       arrowRightScens.classList.toggle(`paginator__arrow_disabled`, currentPage === pageCountScens);
@@ -243,7 +243,7 @@
     }
   });
 
-  arrowLeftScens.addEventListener(`mouseup`, function() {
+  arrowLeftScens.addEventListener(`mouseup`, function () {
     if (currentPage > 1) {
       currentPage -= 1;
       arrowRightScens.classList.toggle(`paginator__arrow_disabled`, currentPage === pageCountScens);
