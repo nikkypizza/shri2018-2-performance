@@ -37,6 +37,7 @@ img {
 .main__greeting {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 27px;
+  font-weight: 700;
   margin-top: 6px;
 }
 
@@ -409,11 +410,11 @@ img {
   height: 331px;
   padding: 0 20px 0 25px;
   border-radius: 20px;
-  background: url("../assets/sh.png") center center/cover no-repeat;
+  background: url("../assets/sh_opt.png") center center/cover no-repeat;
 }
 
 .webp .main {
-  background: url("../assets/webp/sh.webp") center center/cover no-repeat;
+  background: url("../assets/webp/sh_opt.webp") center center/cover no-repeat;
 }
 
 .main__info {
@@ -710,6 +711,7 @@ img {
 .weather__item-temp {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 36px;
+  font-weight: 700;
   line-height: 1.16;
 }
 
@@ -718,7 +720,7 @@ img {
 }
 
 .weather__item_cloud-drizzle {
-  background: url("../assets/cloud-drizzle.png") 100% 70%/26px no-repeat;
+  background: url("../assets/svg/cloud-drizzle.svg") 100% 70%/26px no-repeat;
 }
 
 .panel__icon {

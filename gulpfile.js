@@ -46,7 +46,7 @@ gulp.task(`svgo`, function() {
 
 // Genetare SVG sprite from icons starting with `icon-`
 gulp.task(`sprite`, function() {
-  gulp.src(`assets-source/icon-*.svg`)
+  gulp.src(`assets-source/svg/icon-*.svg`)
     .pipe(imagemin([
       imagemin.svgo()
     ]))
@@ -54,7 +54,7 @@ gulp.task(`sprite`, function() {
       inlineSvg: true
     }))
     .pipe(rename(`sprite.svg`))
-    .pipe(gulp.dest(`assets`));
+    .pipe(gulp.dest(`assets/svg`));
 });
 
 gulp.task(`webp`, function() {
@@ -99,7 +99,7 @@ gulp.task(`cssmin`, function() {
 gulp.task(`jsmin`, function() {
   gulp.src(`js/*.js`)
     .pipe(uglify())
-    .pipe(concat('scripts.js'))
+    .pipe(concat('scripts-min.js'))
     .pipe(gulp.dest(`public/js`));
 });
 
