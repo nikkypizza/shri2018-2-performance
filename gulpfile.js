@@ -15,6 +15,7 @@ var run = require(`run-sequence`);
 var del = require(`del`);
 var uglify = require(`gulp-uglify-es`).default;
 var concat = require('gulp-concat');
+const htmlmin = require('gulp-htmlmin');
 
 // Minify png
 gulp.task(`pngmin`, () =>
@@ -76,33 +77,41 @@ gulp.task(`webp`, function() {
 // Build //
 // ##### //
 
+gulp.task(`clean`, function() {
+  return del(`public`);
+});
+
 gulp.task(`copy`, function() {
   return gulp.src([
-      `*.html`,
-      `favicon.ico`
+      `favicon.ico`,
+      `assets/**/*`,
+      `fonts/**/*`
     ], {
       base: `.`
     })
     .pipe(gulp.dest(`public`));
 });
 
-gulp.task(`clean`, function() {
-  return del(`public`);
-});
-
 gulp.task(`cssmin`, function() {
-  gulp.src(`css/style.css`)
+  gulp.src(`css/styles.css`)
     .pipe(cssmin())
+    .pipe(rename(`style.min.css`))
     .pipe(gulp.dest(`public/css`));
 });
 
 gulp.task(`jsmin`, function() {
   gulp.src(`js/*.js`)
     .pipe(uglify())
-    .pipe(concat('scripts-min.js'))
+    .pipe(concat('scripts.min.js'))
     .pipe(gulp.dest(`public/js`));
 });
 
+gulp.task('htmlmin', () => {
+  gulp.src('*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('public'));
+});
+
 gulp.task(`build`, function(done) {
-  run(`clean`, `copy`, `pngmin`, `jsmin`, `cssmin`, `svgo`, done);
+  run(`clean`, `copy`, `jsmin`, `cssmin`, `htmlmin`, done);
 });
