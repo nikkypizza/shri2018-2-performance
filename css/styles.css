@@ -1,5 +1,25 @@
-.display-none {
-  display: none;
+@font-face {
+  font-family: "PT Sans";
+  font-weight: bold;
+
+  src: url("../fonts/PTSans.woff") format("woff"), url("../fonts/PTSans.eot") format("eot");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-weight: bold;
+
+  src: url("../fonts/PTSans_Narrow.woff") format("woff"), url("../fonts/PTSans_Narrow.eot") format("eot");
+  font-display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 img {
@@ -10,10 +30,13 @@ img {
   border: 0;
 }
 
+.display-none {
+  display: none;
+}
+
 .main__greeting {
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 27px;
-  font-weight: 700;
   margin-top: 6px;
 }
 
@@ -29,19 +52,19 @@ img {
   outline: none;
 
   -webkit-appearance: none;
-  appearance: none;
+          appearance: none;
 }
 
 .adjust-bar::-webkit-slider-thumb {
   width: 60px;
   height: 60px;
   cursor: pointer;
-  border: 3px solid rgba(51, 51, 51, 0.1);
+  border: 3px solid rgba(51, 51, 51, .1);
   border-radius: 30px;
   box-shadow: 0 0 0 4px #ffffff;
 
   -webkit-appearance: none;
-  appearance: none;
+          appearance: none;
 }
 
 .adjust-bar::-moz-range-thumb {
@@ -49,7 +72,7 @@ img {
   width: 60px;
   height: 60px;
   cursor: pointer;
-  border: 3px solid rgba(51, 51, 51, 0.1);
+  border: 3px solid rgba(51, 51, 51, .1);
   border-radius: 30px;
   background: transparent;
   box-shadow: 0 0 0 4px #ffffff;
@@ -63,8 +86,7 @@ img {
   position: relative;
 }
 
-.adjust-bar__container_theme_temp::before,
-.adjust-bar__container_theme_temp::after {
+.adjust-bar__container_theme_temp::before,.adjust-bar__container_theme_temp::after {
   font-size: 18px;
   font-weight: 700;
   position: absolute;
@@ -88,8 +110,7 @@ img {
   position: relative;
 }
 
-.adjust-bar__container_theme_light::before,
-.adjust-bar__container_theme_light::after {
+.adjust-bar__container_theme_light::before,.adjust-bar__container_theme_light::after {
   position: absolute;
   z-index: 1;
   content: "";
@@ -140,7 +161,7 @@ img {
 }
 
 .button:hover {
-  box-shadow: 0 2px 6px 0 rgba(255, 225, 225, 0.6);
+  box-shadow: 0 2px 6px 0 rgba(255, 225, 225, .6);
 }
 
 .button:active {
@@ -331,7 +352,7 @@ img {
 }
 
 .knob__indicator-bg {
-  fill: rgba(51, 51, 51, 0.7);
+  fill: rgba(51, 51, 51, .7);
 }
 
 .knob__indicator-mask {
@@ -365,18 +386,15 @@ img {
   height: 80%;
 }
 
-.link,
-.link:active,
-.link:visited {
-  color: rgba(51, 51, 51, 0.6);
+.link,.link:active,.link:visited {
+  color: rgba(51, 51, 51, .6);
 }
 
 .link {
   text-decoration: none;
 }
 
-.link_active,
-.link:hover {
+.link_active,.link:hover {
   color: inherit;
 }
 
@@ -402,7 +420,7 @@ img {
   width: 61.585%;
   padding-top: 20px;
   padding-left: 20px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, .6);
 }
 
 .main__panel {
@@ -435,9 +453,9 @@ img {
   margin-left: 52px;
 }
 
-.menu__icon {
+/*.menu__icon {
   display: none;
-}
+}*/
 
 .menu__item {
   font-size: 16px;
@@ -465,7 +483,7 @@ img {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: rgba(51, 51, 51, 0.5);
+  background: rgba(51, 51, 51, .5);
 }
 
 .modal_open {
@@ -473,7 +491,7 @@ img {
 }
 
 .modal_open .modal__content {
-  animation: modal 0.2s ease forwards;
+  animation: modal .2s ease forwards;
 }
 
 .modal__title {
@@ -541,20 +559,12 @@ img {
 
 @keyframes modal {
   from {
-    transform: scale(0.2);
+    transform: scale(.2);
   }
 
   to {
     transform: scale(1);
   }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  height: 100%;
 }
 
 .page {
@@ -598,15 +608,15 @@ html {
 }
 
 .paginator__arrow:hover {
-  opacity: 0.5;
+  opacity: .5;
 }
 
 .paginator__arrow:active {
-  opacity: 0.3;
+  opacity: .3;
 }
 
 .paginator__arrow_disabled {
-  opacity: 0.3;
+  opacity: .3;
 }
 
 .panel {
@@ -617,7 +627,7 @@ html {
   min-height: 100px;
   padding: 14px;
   cursor: pointer;
-  transition: opacity 0.3s ease-out;
+  transition: opacity .3s ease-out;
   border-radius: 20px;
   background: #f7f7f7;
 
@@ -626,7 +636,7 @@ html {
 
 .panel:hover {
   background: #ffffff;
-  box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
+  box-shadow: 0 2px 6px 0 rgba(197, 186, 186, .5);
 }
 
 .panel:active {
@@ -698,9 +708,8 @@ html {
 }
 
 .weather__item-temp {
-  font-family: "PT Sans Narrow", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 36px;
-  font-weight: 700;
   line-height: 1.16;
 }
 

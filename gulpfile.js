@@ -14,6 +14,7 @@ var cssmin = require(`gulp-csso`);
 var run = require(`run-sequence`);
 var del = require(`del`);
 var uglify = require(`gulp-uglify-es`).default;
+var concat = require('gulp-concat');
 
 // Minify png
 gulp.task(`pngmin`, () =>
@@ -98,6 +99,7 @@ gulp.task(`cssmin`, function() {
 gulp.task(`jsmin`, function() {
   gulp.src(`js/*.js`)
     .pipe(uglify())
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest(`public/js`));
 });
 

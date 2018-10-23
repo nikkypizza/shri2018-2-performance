@@ -16,6 +16,7 @@
     "eslint-config-htmlacademy": "0.5.x",
     "gulp": "3.9.x",
     "gulp-bower-normalize": "^1.1.1",
+    "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "^1.2.0",
