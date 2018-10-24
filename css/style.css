@@ -415,7 +415,7 @@ img {
   height: 331px;
   padding: 0 20px 0 25px;
   border-radius: 20px;
-  background: url("../assets/sh.jpg") center center/cover no-repeat;
+  background: url("../assets-source/sh.png") center center/cover no-repeat;
 }
 
 /*.webp .main {
@@ -720,7 +720,7 @@ img {
 }
 
 .weather__item_cloud-drizzle {
-  background: url("../assets/svg/cloud-drizzle.svg") 100% 70%/26px no-repeat;
+  background: url("../assets-source/cloud-drizzle.png") 100% 70%/26px no-repeat;
 }
 
 .panel__icon {
