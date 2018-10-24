@@ -415,15 +415,15 @@ img {
   height: 331px;
   padding: 0 20px 0 25px;
   border-radius: 20px;
+  background: url("../assets/sh.jpg") center center/cover no-repeat;
 }
 
-.webp .main {
+/*.webp .main {
   background: url("../assets/webp/sh.webp") center center/cover no-repeat;
 }
 
 .no-webp .main {
-  background: url("../assets/sh.jpg") center center/cover no-repeat;
-}
+}*/
 
 .main__info {
   width: 61.585%;
