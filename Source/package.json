@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "gulp-htmlmin": "^5.0.1",
+    "gulp-minify-css-names": "^1.5.0",
     "hermione": "^0.90.1",
     "html-reporter": "^2.22.0"
   },
