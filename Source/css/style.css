@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-weight: bold;
 
-  src: url("../fonts/PTSans.woff") format("woff"), url("../fonts/PTSans.eot") format("eot");
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2"), url("../fonts/PTSans-Bold.eot") format("eot");
   font-display: block;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans Narrow";
   font-weight: bold;
 
-  src: url("../fonts/PTSans_Narrow.woff") format("woff"), url("../fonts/PTSans_Narrow.eot") format("eot");
+  src: url("../fonts/PTSans-NarrowBold.woff2") format("woff2"), url("../fonts/PTSans_Narrow.eot") format("eot");
   font-display: block;
 }
 
